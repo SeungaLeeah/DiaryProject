@@ -1,10 +1,13 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 
 const Home = memo(() => {
+
+    const [nowDate, setNowDate]= useState(new Date());
+    console.log(nowDate)
+
     return (
         <div>
-            <h1>Home</h1>
-            <p>일기 메인 페이지입니다</p>
+            
         </div>
     );
 });

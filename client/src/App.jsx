@@ -10,7 +10,7 @@ import Diary from './pages/Diary';
 import GlobalStyles from './GlobalStyles';
 
 // components
-import MyButton from './components/MyButton';
+import MyButton from './components/Button';
 
 const AppContainer = styled.div`
     @media (min-width: 650px) {
@@ -32,7 +32,6 @@ const App = memo(() => {
       <GlobalStyles/>
       <AppContainer>
       <h1>App.jsx</h1>
-
       <MyButton/>
       <Routes>
         <Route path='/' element={<Home/>}/>

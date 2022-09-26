@@ -39,10 +39,10 @@ export const getList = createAsyncThunk("EmotionDiarySlice/getList", async(paylo
 
         try{
           result = await axios.get(API_URL,{
-            postId : payload.postId,
-            name : payload.name,
-            email : payload.email,
-            body : payload.body
+            id : payload.id,
+            content : payload.content,
+            emotion : payload.emotion,
+            date : new Date(result).getTime()
           });
         }catch(err) {
           result = rejectWithValue(err.response);
@@ -56,10 +56,9 @@ export const getList = createAsyncThunk("EmotionDiarySlice/getList", async(paylo
 
         try{
           result = await axios.get(`${API_URL}/${payload.id}`,{
-            postId : payload.postId,
-            name : payload.name,
-            email : payload.email,
-            body : payload.body
+            content : payload.content,
+            emotion : payload.emotion,
+            date : new Date(result).getTime()
           });
         }catch(err) {
           result = rejectWithValue(err.response);
@@ -73,10 +72,9 @@ export const getList = createAsyncThunk("EmotionDiarySlice/getList", async(paylo
 
         try{
           result = await axios.get(`${API_URL}/${payload.id}`,{
-            postId : payload.postId,
-            name : payload.name,
-            email : payload.email,
-            body : payload.body
+            content : payload.content,
+            emotion : payload.emotion,
+            date : new Date(result).getTime()
           });
         }catch(err) {
           result = rejectWithValue(err.response);
