@@ -1,9 +1,6 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 
-// slice
-import {postItem} from '../slices/EmotionDiarySlice';
-
 const ButtonContainer = styled.div`
     button{
         cursor: pointer;
@@ -19,11 +16,11 @@ const ButtonContainer = styled.div`
     }
 `;
 
-const MyButton = memo(() => {
+const MyButton = memo(({text, type, onClick}) => {
     
     return (
         <ButtonContainer>
-            <button>버튼</button>
+            <button className={["Button", `button_${type}`].join(" ")} onClick={onClick}>{text}</button>
         </ButtonContainer>
     );
 });
